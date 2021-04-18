@@ -1,0 +1,31 @@
+1. sudo apt update
+sudo apt install mysql-server
+nano .my.cnf 
+[client]
+user=root
+password=...
+
+2. mysql
+CREATE DATABASE example;
+USE example
+CREATE TABLE users (id INT,name CHAR (10) DEFAULT 'unnamed');
+
+3. mysqldump example > example.sql
+mysql
+CREATE DATABASE sample;
+exit 
+mysql sample < example.sql
+
+4.mysql
+create database task4;
+use task4;
+create table task4.help_keyword 
+	select * from mysql.help_keyword
+	limit 10;
+
+пробовал через дамп:
+create database task4
+exit 
+mysqldump --where='true limit 10' mysql help_keyword > task4.sql
+mysql task4 < task4.sql - выдает ошибку
+
