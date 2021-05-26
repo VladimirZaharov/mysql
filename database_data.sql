@@ -487,7 +487,7 @@ DROP TABLE IF EXISTS `profiles`;
 
 CREATE TABLE `profiles` (
   `user_id` int(10) unsigned NOT NULL,
-  `gender` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` enum("f","m") COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `city` varchar(130) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar_media_id` int(10) unsigned DEFAULT NULL,

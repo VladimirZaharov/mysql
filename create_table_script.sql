@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS profiles;
 
 CREATE TABLE profiles (
   user_id INT UNSIGNED NOT NULL PRIMARY KEY,
-  gender CHAR(1),
+  gender ENUM("f","m"),
   birthday DATE,
   city VARCHAR(130),
   avatar_media_id INT UNSIGNED 
